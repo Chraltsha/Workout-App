@@ -1,4 +1,4 @@
-import { db } from "./firebaseConfig";
+import { db } from "./firebaseConfig.js";
 import { doc, setDoc, getDoc, increment, serverTimestamp } from "firebase/firestore";
 
 // Get the cached summary for a user
