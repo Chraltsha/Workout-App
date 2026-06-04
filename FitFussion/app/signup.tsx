@@ -1,5 +1,6 @@
 import React from 'react';
 import { Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
+import { signUp } from '../src/services/firebase/authService.js';
 
 export default function SignupScreen() {
   const [username, setUsername] = React.useState('');
@@ -56,7 +57,7 @@ export default function SignupScreen() {
           />
         </View>
 
-        <Pressable style={styles.button}>
+        <Pressable style={styles.button} onPress={() => signUp(email, password, username)}>
           <Text style={styles.buttonText}>Sign up</Text>
         </Pressable>
       </View>
