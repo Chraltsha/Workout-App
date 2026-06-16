@@ -40,7 +40,10 @@ export default function LoginScreen() {
           <Text style={styles.rememberText}>Remember me</Text>
         </Pressable>
 
-        <Pressable style={styles.loginButton}>
+        <Pressable 
+          style={styles.loginButton}
+          onPress={() => router.push('/view/workout')}
+        >
           <Text style={styles.loginButtonText}>Login</Text>
         </Pressable>
 
